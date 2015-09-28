@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			.message{
+				padding: 10px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.name{
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- 送出留言表單 -->
+		<form action="/messages">
+			<input type="text" name="name" placeholder="name" />
+			<input type="text" name="content" placeholder="content" />
+			<button>save</button>
+		</form>
+
+		<!-- 讀取留言放這裡 -->
+		<div id="messages"></div>
+
+		<!-- 使用 jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="messages.js"></script>
+
+
+		<script>
+
+			$(document).ready(function($) {
+				load_messages();
+				$("form").on("submit", post_message);
+			});
+
+		</script>
+	</body>
+</html>
