@@ -4,7 +4,7 @@ Laravel + React + React-Router + Webpack
 
 ## 下載
 
-git clone 
+git clone https://github.com/sexyoung/laravel.react.example
 
 ## 安裝 Laravel 套件
 ```
